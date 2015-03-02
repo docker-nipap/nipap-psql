@@ -1,5 +1,4 @@
-FROM postgres:9.4
+FROM postgres:9.3
 MAINTAINER Codey Oxley
 
-COPY sql /sql
-COPY *.sh /docker-entrypoint-initdb.d/
+RUN apt-get install postgresql-9.3-ip4r
